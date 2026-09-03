@@ -1,0 +1,15 @@
+{
+  "name": "Samu · Psicólogo Gamer",
+  "short_name": "Samu Psicólogo",
+  "description": "Psicología especializada en la intersección entre salud mental, videojuegos y tecnología.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0A0F1F",
+  "theme_color": "#0A0F1F",
+  "lang": "es",
+  "icons": [
+    { "src": "/assets/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/brand/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

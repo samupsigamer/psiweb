@@ -1,0 +1,12 @@
+# Cloudflare Pages — redirecciones
+# Documentación: https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# Este archivo está preparado para cuando la web crezca. Por ejemplo, si en
+# el futuro divides el sitio en varias páginas y quieres mantener enlaces
+# antiguos con anclas (#sobre-mi, #hablamos...) funcionando como rutas
+# propias, o si conectas un dominio antiguo, añade aquí las reglas:
+#
+# /viejo-enlace   /nuevo-enlace   301
+# /blog/*         https://blog.samupsigamer.com/:splat   301
+#
+# De momento no hay redirecciones activas.

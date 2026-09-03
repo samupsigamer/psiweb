@@ -1,0 +1,32 @@
+# Cloudflare Pages — reglas de cabeceras HTTP
+# Documentación: https://developers.cloudflare.com/pages/configuration/headers/
+
+# Seguridad básica en todas las rutas
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Imágenes y assets: se pueden cachear de forma agresiva porque, si cambian,
+# lo normal es subir un archivo con nombre distinto o purgar caché en Cloudflare.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS y JS: caché larga pero revalidable (útil mientras el sitio crece y
+# se actualizan estos archivos con el mismo nombre).
+/styles.css
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/script.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# HTML: siempre revalidar para que los cambios de contenido se vean al instante.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate

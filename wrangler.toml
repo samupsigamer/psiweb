@@ -1,0 +1,10 @@
+name = "samu-psicologo-gamer"
+compatibility_date = "2026-01-01"
+
+# Carpeta que se publica tal cual (la raíz del proyecto: HTML/CSS/JS/assets).
+pages_build_output_dir = "."
+
+# Cuando el sitio crezca y quieras añadir lógica en el servidor (por ejemplo,
+# un formulario de contacto sin backend propio), Cloudflare Pages Functions
+# se activa automáticamente creando una carpeta /functions en la raíz —
+# no hace falta tocar este archivo para eso.
