@@ -413,6 +413,41 @@ svg{ width: 1em; height: 1em; fill: currentColor; }
 }
 .feature-card p{ color: var(--ink-dim); font-size: .93rem; }
 
+/* tarjeta como enlace (páginas de detalle) */
+.feature-card.is-link{ cursor: pointer; display: block; }
+.card-arrow{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: .85rem;
+  color: var(--purple-2);
+}
+.card-arrow .arrow{ transition: transform .2s ease; }
+.feature-card:hover .card-arrow .arrow{ transform: translateX(4px); }
+
+/* enlace de retorno en páginas de detalle */
+.back-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-dim);
+  font-size: .9rem;
+  font-weight: 500;
+  margin-bottom: 22px;
+  transition: color .2s ease;
+}
+.back-link:hover{ color: var(--white); }
+.back-link .arrow{ display: inline-block; transition: transform .2s ease; }
+.back-link:hover .arrow{ transform: translateX(-4px); }
+
+/* hero simplificado para páginas de detalle */
+.detail-hero{ padding: 56px 0 12px; }
+.detail-hero .hero-title-main{ font-size: clamp(2rem, 4.2vw, 2.8rem); }
+.detail-hero .hero-lead{ max-width: 640px; }
+
 /* ================= TAGS ================= */
 .tag-list{
   list-style: none;
