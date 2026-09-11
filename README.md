@@ -22,6 +22,7 @@ entre salud mental, videojuegos y tecnología. HTML, CSS y JavaScript puros
 ```
 .
 ├── index.html
+├── sobre-mi.html          # Página propia: Sobre mí (antes era una sección de index.html)
 ├── divulgacion.html       # Página de detalle: Divulgación psicológica
 ├── familias.html          # Página de detalle: Acompañamiento a familias
 ├── recursos.html          # Página de detalle: Recursos y herramientas
@@ -44,10 +45,17 @@ entre salud mental, videojuegos y tecnología. HTML, CSS y JavaScript puros
         └── og-image.png            # Imagen para compartir en redes
 ```
 
+### La página "Sobre mí"
+
+El enlace "Sobre mí" del menú (arriba en todas las páginas) ya no hace
+scroll dentro de `index.html`: lleva a su propia página, `sobre-mi.html`,
+con el mismo contenido de presentación más una sección de "Formación,
+enfoque y experiencia" y enlaces a las 4 páginas de "Qué hago".
+
 ### Las 4 páginas de "Qué hago"
 
 Las cuatro tarjetas de la sección "Cuatro maneras de acompañarte" (en
-`index.html`) ahora son enlaces a su propia página de detalle, con el
+`index.html`) son enlaces a su propia página de detalle, con el
 mismo diseño y estilo del resto del sitio (cabecera, pie, tarjetas, cita
 destacada). Cada página incluye:
 
@@ -60,6 +68,22 @@ destacada). Cada página incluye:
 Para editar el contenido de cualquiera de ellas, abre el archivo `.html`
 correspondiente directamente: el texto está en español plano, sin
 necesidad de tocar el CSS.
+
+### Los 4 iconos del pie de página
+
+Los 4 iconos redondeados del footer (Psicología, Gaming, Familias,
+Prevención) ahora son enlaces reales, cada uno a la página de detalle más
+relacionada:
+
+| Icono       | Lleva a                  |
+|-------------|---------------------------|
+| Psicología  | `divulgacion.html`        |
+| Gaming      | `habitos-digitales.html`  |
+| Familias    | `familias.html`           |
+| Prevención  | `recursos.html`           |
+
+Para cambiar a dónde apunta alguno, busca en cualquier página el bloque
+`<ul class="footer-icons">` y edita el `href` del enlace correspondiente.
 
 ## Publicar en Cloudflare Pages (sin terminal, todo con el ratón)
 

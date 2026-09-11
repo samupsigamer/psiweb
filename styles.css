@@ -580,7 +580,7 @@ svg{ width: 1em; height: 1em; fill: currentColor; }
   margin: 0;
   padding: 0;
 }
-.footer-icons li{
+.footer-icons a{
   width: 48px; height: 48px;
   border-radius: var(--radius-md);
   display: flex;
@@ -589,13 +589,14 @@ svg{ width: 1em; height: 1em; fill: currentColor; }
   background: var(--bg-card);
   border: 1px solid rgba(168,63,247,.28);
   color: var(--purple-2);
-  transition: transform .2s ease, border-color .2s ease, color .2s ease, background .2s ease;
+  transition: transform .2s ease, border-color .2s ease, color .2s ease, background .2s ease, box-shadow .2s ease;
 }
-.footer-icons li:hover{
+.footer-icons a:hover, .footer-icons a:focus-visible{
   transform: translateY(-4px);
   border-color: rgba(168,63,247,.6);
   background: var(--grad-purple);
   color: var(--white);
+  box-shadow: var(--shadow-glow);
 }
 .footer-icons svg{ width: 22px; height: 22px; }
 .footer-meta{ text-align: right; }
