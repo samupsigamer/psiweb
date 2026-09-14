@@ -188,6 +188,29 @@ terminal para nada, simplemente abre `index.html` haciendo doble clic.
 
 ## Cambios recientes
 
+- El orden de la home ahora es: Sobre mí → Qué hago → Portfolio →
+  Intereses → Testimonios → Hablamos. El menú y el pie de página
+  siguen ese mismo orden.
+- Las tarjetas de "Cuatro maneras de acompañarte" (home y "Sobre mí")
+  ya no son clicables: son solo informativas, para no duplicar la
+  función del Portfolio. Debajo de ellas hay un enlace de texto al
+  Portfolio.
+- El Portfolio ahora es un carrusel horizontal (con flechas y los
+  filtros de siempre) en vez de una rejilla que crece hacia abajo:
+  así puedes añadir más piezas sin que ocupen más alto de pantalla.
+- Nueva sección de **Testimonios** (también en carrusel) entre
+  "Intereses" y "Hablamos". Los testimonios son de ejemplo — sustitúyelos
+  por los tuyos reales antes de publicar (busca `id="testimonialTrack"`
+  en `index.html`).
+- Las estadísticas de "Intereses" ahora suben animadas hasta su cifra
+  al hacer scroll, y tienen iconos con más color (busca `data-target`
+  en `index.html` para cambiar las cifras).
+- El botón "Escríbeme" del menú ahora abre WhatsApp directamente
+  (antes llevaba al mismo sitio que "Hablamos", lo cual era confuso).
+- Las rejillas de 3 tarjetas (por ejemplo "Explora también" en las
+  páginas de detalle, o "Formación, enfoque y experiencia" en "Sobre
+  mí") ya no quedan descentradas: usan la clase `cards-grid-3`.
+- Las citas destacadas (`.quote-card`) ya cierran las comillas.
 - El botón flotante de WhatsApp (abajo a la derecha) ahora abre
   directamente una conversación de WhatsApp con un mensaje ya escrito,
   en vez de bajar hasta la sección de contacto.
