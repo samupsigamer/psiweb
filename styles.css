@@ -323,6 +323,10 @@ svg{ width: 1em; height: 1em; fill: currentColor; }
   margin-right: 4px;
   vertical-align: -2px;
 }
+.quote-mark-close{
+  margin-right: 0;
+  margin-left: 2px;
+}
 
 .qh-inline{
   display: flex;
@@ -583,9 +587,21 @@ svg{ width: 1em; height: 1em; fill: currentColor; }
   border: 1px solid rgba(168,63,247,.2);
   border-radius: var(--radius-lg);
   padding: 26px 22px;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 .piece-card h3{ font-size: 1rem; margin-bottom: 8px; }
 .piece-card p{ color: var(--ink-dim); font-size: .9rem; }
+.piece-card.is-link{
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+.piece-card.is-link:hover{
+  transform: translateY(-4px);
+  border-color: rgba(168,63,247,.5);
+  box-shadow: var(--shadow-card);
+}
+.piece-card.is-link:hover .card-arrow .arrow{ transform: translateX(4px); }
 
 /* ================= TAGS ================= */
 .tag-list{

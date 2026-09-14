@@ -227,3 +227,27 @@ terminal para nada, simplemente abre `index.html` haciendo doble clic.
   videollamada con la cara de otra persona. Se dejó tal cual porque no
   se pidió tocarla, pero si prefieres que la difumine por privacidad,
   dímelo y lo hago sin tocar el resto de la imagen.
+- Las comillas de cierre de las citas destacadas ya usan el mismo morado
+  que las de apertura (antes se quedaban en blanco).
+- Los iconos del pie de página ahora representan mejor cada categoría
+  (bombilla = Divulgación, personas = Familias, documento = Recursos,
+  gráfico = Hábitos digitales) y el texto de cada enlace coincide con su
+  destino real.
+- **Cada pieza del portfolio tiene ahora su propia página HTML
+  independiente** (por ejemplo `por-que-enganchan.html`,
+  `loot-boxes.html`...), aunque compartan categoría. Tanto las tarjetas
+  del carrusel de portfolio en `index.html` como las tarjetas de "Piezas
+  destacadas" dentro de cada página de categoría enlazan directamente a
+  su página propia. Cada página de pieza incluye su contenido, una cita
+  y enlaces a las otras piezas de la misma categoría ("Sigue
+  explorando"). Para añadir una pieza nueva: crea el archivo `.html`
+  siguiendo el mismo patrón que las existentes, añade su tarjeta en el
+  carrusel de `index.html` con `href="tu-pieza.html"`, y opcionalmente
+  una tarjeta enlazada en la sección "Piezas destacadas" de su página de
+  categoría.
+- Las 4 tarjetas de "Cuatro maneras de acompañarte" (en `index.html` y
+  `sobre-mi.html`) ahora usan ilustraciones de personaje en vez de
+  iconos, una por categoría: `assets/categorias/divulgacion.png`,
+  `familias.png`, `recursos.png` y `habitos.png`. Para cambiar alguna,
+  sustituye el archivo correspondiente por otra imagen con fondo
+  transparente (PNG) del mismo estilo.
