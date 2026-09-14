@@ -75,8 +75,8 @@
 
     <nav class="main-nav" id="mainNav">
       <a href="sobre-mi.html">Sobre mí</a>
+      <a href="#portfolio">Portfolio</a>
       <a href="#que-hago">Qué hago</a>
-      <a href="#intereses">Intereses</a>
       <a href="#hablamos">Hablamos</a>
     </nav>
 
@@ -132,6 +132,10 @@
               ofrecer recursos, acompañamiento y divulgación.</p>
           </div>
         </div>
+
+        <a href="#portfolio" class="btn btn-primary btn-wide" style="margin-top: 22px;">
+          Ver mi portfolio <span class="arrow">→</span>
+        </a>
       </div>
 
       <div class="hero-visual">
@@ -174,10 +178,118 @@
     </div>
   </section>
 
-  <!-- ===================== QUÉ HAGO ===================== -->
-  <section class="section" id="que-hago">
+  <!-- ===================== PORTFOLIO ===================== -->
+  <section class="section" id="portfolio">
     <div class="wrap">
-      <p class="eyebrow eyebrow-center">02 · Qué hago</p>
+      <p class="eyebrow eyebrow-center">02 · Portfolio</p>
+      <h2 class="section-title center">Piezas que reflejan mi forma de trabajar</h2>
+      <p class="section-lead center">
+        Una muestra de los artículos, guías y materiales que voy compartiendo
+        en cada una de las cuatro áreas en las que trabajo.
+      </p>
+
+      <div class="portfolio-filter" role="group" aria-label="Filtrar portfolio por área">
+        <button class="filter-btn is-active" data-filter="todos" aria-pressed="true">Todo</button>
+        <button class="filter-btn" data-filter="divulgacion" aria-pressed="false">Divulgación</button>
+        <button class="filter-btn" data-filter="familias" aria-pressed="false">Familias</button>
+        <button class="filter-btn" data-filter="recursos" aria-pressed="false">Recursos</button>
+        <button class="filter-btn" data-filter="habitos" aria-pressed="false">Hábitos digitales</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <a class="feature-card portfolio-card is-link" href="divulgacion.html#por-que-enganchan" data-category="divulgacion">
+          <span class="format-tag cat-divulgacion">Artículo</span>
+          <h3>Por qué los videojuegos enganchan (y no es casualidad)</h3>
+          <p>Cómo el diseño de recompensas activa la motivación y qué tiene esto de normal.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="divulgacion.html#loot-boxes" data-category="divulgacion">
+          <span class="format-tag cat-divulgacion">Hilo</span>
+          <h3>Loot boxes explicadas para una madre o un padre</h3>
+          <p>Qué son, cómo funcionan y qué conviene saber antes de decir que sí.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="divulgacion.html#mitos-salud-mental" data-category="divulgacion">
+          <span class="format-tag cat-divulgacion">Vídeo</span>
+          <h3>Salud mental y gaming: mitos que hay que tirar a la basura</h3>
+          <p>Separando el pánico moral de lo que dice realmente la evidencia.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="familias.html#hablar-tiempo-pantalla" data-category="familias">
+          <span class="format-tag cat-familias">Guía descargable</span>
+          <h3>Cómo hablar con tu hijo adolescente sobre su tiempo de pantalla</h3>
+          <p>Un guion de conversación que no empieza por la bronca.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="familias.html#senales-alarma" data-category="familias">
+          <span class="format-tag cat-familias">Artículo</span>
+          <h3>Señales de alarma vs. uso normal: la diferencia real</h3>
+          <p>Qué mirar de verdad antes de saltar a la conclusión de "adicción".</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="familias.html#acuerdos-familiares" data-category="familias">
+          <span class="format-tag cat-familias">Plantilla</span>
+          <h3>Acuerdos familiares de pantallas que sí funcionan</h3>
+          <p>Una plantilla para construir normas entre todos, no para imponerlas.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="recursos.html#checklist-uso-problematico" data-category="recursos">
+          <span class="format-tag cat-recursos">Checklist</span>
+          <h3>¿Mi hijo tiene un problema con los videojuegos?</h3>
+          <p>Ocho preguntas para hacerte antes de alarmarte.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="recursos.html#glosario-gamer" data-category="recursos">
+          <span class="format-tag cat-recursos">Guía</span>
+          <h3>Glosario gamer para padres</h3>
+          <p>Loot, grind, streaming, skins... lo esencial para entender de qué hablan.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="recursos.html#kit-educadores" data-category="recursos">
+          <span class="format-tag cat-recursos">Guía descargable</span>
+          <h3>Kit de recursos para educadores</h3>
+          <p>Material para trabajar hábitos digitales en el aula, sin sermón.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="habitos-digitales.html#diseno-recompensas" data-category="habitos">
+          <span class="format-tag cat-habitos">Artículo</span>
+          <h3>El diseño de recompensas en los videojuegos, explicado</h3>
+          <p>Rachas, recompensas variables y notificaciones: el mecanismo por dentro.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="habitos-digitales.html#limites-que-se-mantienen" data-category="habitos">
+          <span class="format-tag cat-habitos">Guía</span>
+          <h3>Cómo construir límites de pantalla que se mantengan</h3>
+          <p>La diferencia entre una norma que se cumple y una que se pelea cada día.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+
+        <a class="feature-card portfolio-card is-link" href="habitos-digitales.html#rutina-digital-5-pasos" data-category="habitos">
+          <span class="format-tag cat-habitos">Infografía</span>
+          <h3>Rutina digital saludable en 5 pasos</h3>
+          <p>Un esquema visual simple para ordenar el día con pantallas de por medio.</p>
+          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
+        </a>
+      </div>
+
+      <p class="portfolio-note">¿Buscas algo sobre un tema concreto? <a href="#hablamos" class="hl">Escríbeme</a> y lo vemos.</p>
+    </div>
+  </section>
+
+  <!-- ===================== QUÉ HAGO ===================== -->
+  <section class="section section-tint" id="que-hago">
+    <div class="wrap">
+      <p class="eyebrow eyebrow-center">03 · Qué hago</p>
       <h2 class="section-title center">Cuatro maneras de acompañarte</h2>
       <p class="section-lead center">
         Combino la psicología con el mundo digital para ofrecer recursos,
@@ -225,9 +337,9 @@
   </section>
 
   <!-- ===================== INTERESES ===================== -->
-  <section class="section section-tint" id="intereses">
+  <section class="section" id="intereses">
     <div class="wrap">
-      <p class="eyebrow eyebrow-center">03 · Me interesa especialmente</p>
+      <p class="eyebrow eyebrow-center">04 · Me interesa especialmente</p>
       <h2 class="section-title center">Los temas que guían mi trabajo</h2>
 
       <ul class="tag-list">
@@ -373,8 +485,8 @@
       <p class="footer-tag">Salud mental, videojuegos y familias.</p>
       <nav class="footer-nav">
         <a href="sobre-mi.html">Sobre mí</a>
+        <a href="#portfolio">Portfolio</a>
         <a href="#que-hago">Qué hago</a>
-        <a href="#intereses">Intereses</a>
         <a href="#hablamos">Hablamos</a>
       </nav>
       <p class="footer-copy">© <span id="year"></span> Samu · Psicólogo Gamer. Todos los derechos reservados.</p>

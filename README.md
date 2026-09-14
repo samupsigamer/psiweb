@@ -45,6 +45,37 @@ entre salud mental, videojuegos y tecnología. HTML, CSS y JavaScript puros
         └── og-image.png            # Imagen para compartir en redes
 ```
 
+### La sección "Portfolio" (nueva)
+
+En `index.html`, entre el "Sobre mí" y "Qué hago" hay una nueva sección
+`id="portfolio"` pensada para mostrar tu trabajo de divulgación como
+piezas de un portfolio: cada tarjeta tiene una etiqueta de formato
+(Artículo, Vídeo, Guía descargable...), un título y una descripción
+corta, y enlaza a una pieza concreta dentro de la página de detalle que
+corresponda (por ejemplo `divulgacion.html#por-que-enganchan`).
+
+Arriba de la rejilla hay botones de filtro (Todo / Divulgación /
+Familias / Recursos / Hábitos digitales) que muestran u ocultan tarjetas
+según la categoría — funciona con JavaScript puro, sin recargar la
+página (mira `script.js`, bloque "Filtro del portfolio").
+
+Para **añadir, quitar o editar una pieza**:
+
+1. Abre `index.html`, busca `<div class="portfolio-grid">` y edita/añade
+   una tarjeta `<a class="feature-card portfolio-card is-link" ...>`.
+   El atributo `data-category` debe ser uno de: `divulgacion`,
+   `familias`, `recursos`, `habitos` (así el filtro la reconoce).
+2. Si quieres que la pieza tenga su propio detalle dentro de la página
+   correspondiente, añade también un bloque `<article class="piece-card"
+   id="...">` dentro de la sección "Piezas destacadas" de esa página
+   (por ejemplo, en `familias.html`). El `id` debe coincidir con el que
+   usas en el `href="familias.html#ese-id"` de la tarjeta del home.
+
+Las páginas de detalle (`divulgacion.html`, `familias.html`,
+`recursos.html`, `habitos-digitales.html`) mantienen todo lo que ya
+tenían (introducción, cita, "Explora también" y llamada a la acción) y
+ahora incluyen además esa sección "Piezas destacadas" arriba del todo.
+
 ### La página "Sobre mí"
 
 El enlace "Sobre mí" del menú (arriba en todas las páginas) ya no hace
@@ -160,9 +191,16 @@ terminal para nada, simplemente abre `index.html` haciendo doble clic.
 - El botón flotante de WhatsApp (abajo a la derecha) ahora abre
   directamente una conversación de WhatsApp con un mensaje ya escrito,
   en vez de bajar hasta la sección de contacto.
-- La imagen de la página "Sobre mí" es ahora un "versus" entre una foto
-  real y la versión chibi (mascota) de la web:
-  `assets/personajes/samu-real-vs-chibi.png`. El fondo del monitor y del
-  portátil de la foto original se difuminó por privacidad. Si en algún
-  momento quieres actualizar la foto (otra pose, otra ropa...), dímelo y
-  genero una nueva versión con el mismo tratamiento.
+- La imagen de la página "Sobre mí" es ahora la composición "Player 1"
+  (foto real a la izquierda, versión chibi a la derecha, separadas por
+  un rayo con la placa "PLAYER 1"): `assets/personajes/samu-player1.jpg`.
+  La imagen se usa tal cual se generó, sin ningún retoque de color ni
+  recorte, para no alterar la foto real. El marco redondeado con borde
+  morado lo pone la propia web (la misma clase `.hero-image-frame` que
+  usan el resto de imágenes), así que si en el futuro cambias esta
+  imagen por otra, no hace falta añadirle marco ni bordes: solo
+  sustituye el archivo.
+  ⚠️ En el monitor del fondo de la foto se ve, de forma tenue, una
+  videollamada con la cara de otra persona. Se dejó tal cual porque no
+  se pidió tocarla, pero si prefieres que la difumine por privacidad,
+  dímelo y lo hago sin tocar el resto de la imagen.

@@ -41,6 +41,29 @@ if (sections.length && navLinks.length) {
   sections.forEach(section => sectionObserver.observe(section));
 }
 
+// ===== Filtro del portfolio (home) =====
+const filterBtns = document.querySelectorAll('.filter-btn');
+const portfolioCards = document.querySelectorAll('.portfolio-card[data-category]');
+
+if (filterBtns.length && portfolioCards.length) {
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-pressed', 'true');
+
+      const filter = btn.getAttribute('data-filter');
+      portfolioCards.forEach(card => {
+        const show = filter === 'todos' || card.getAttribute('data-category') === filter;
+        card.classList.toggle('is-hidden', !show);
+      });
+    });
+  });
+}
+
 // ===== Animación de aparición al hacer scroll =====
 const revealTargets = document.querySelectorAll(
   '.feature-card, .tag-pill, .stat, .contact-card, .badge-pill, .quote-card'
