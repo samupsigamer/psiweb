@@ -146,6 +146,23 @@ terminal para nada, simplemente abre `index.html` haciendo doble clic.
 
 - Dominio real en lugar de `samupsigamer.com` (marcador de posición) en
   `index.html`, `robots.txt` y `sitemap.xml`.
-- Email real (`hola@samupsigamer.com`) y WhatsApp
-  (`https://wa.me/000000000`) en la sección "¿Hablamos?".
+- Email real (`hola@samupsigamer.com`) y **número de WhatsApp real** en
+  lugar de `https://wa.me/000000000`. Este número aparece en **dos
+  sitios de cada página**: la tarjeta de contacto en "¿Hablamos?" y el
+  botón flotante de WhatsApp (abajo a la derecha, visible en las 6
+  páginas). Busca `wa.me/000000000` en los archivos `.html` y
+  sustitúyelo por tu número con prefijo de país sin espacios ni símbolos
+  (ejemplo: `34612345678`).
 - Enlaces reales de Instagram y TikTok si aún no lo son.
+
+## Cambios recientes
+
+- El botón flotante de WhatsApp (abajo a la derecha) ahora abre
+  directamente una conversación de WhatsApp con un mensaje ya escrito,
+  en vez de bajar hasta la sección de contacto.
+- La imagen de la página "Sobre mí" es ahora un "versus" entre una foto
+  real y la versión chibi (mascota) de la web:
+  `assets/personajes/samu-real-vs-chibi.png`. El fondo del monitor y del
+  portátil de la foto original se difuminó por privacidad. Si en algún
+  momento quieres actualizar la foto (otra pose, otra ropa...), dímelo y
+  genero una nueva versión con el mismo tratamiento.
