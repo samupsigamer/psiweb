@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía completa sobre loot boxes: qué son, cómo funcionan psicológicamente (incertidumbre, refuerzo variable, sistemas pity), qué dice la ley en distintos países, señales de alerta y consejos prácticos.">
+  <title>Loot boxes: la guía completa | Samu Psicólogo Gamer</title>
+  <link rel="canonical" href="https://samupsigamer.com/guia-loot-boxes.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Samu · Psicólogo Gamer">
+  <meta property="og:title" content="Loot boxes: la guía completa | Samu Psicólogo Gamer">
+  <meta property="og:description" content="Qué son las loot boxes, cómo funcionan psicológicamente, qué dice la ley y cómo detectar señales de alerta.">
+  <meta property="og:image" content="https://samupsigamer.com/assets/lootboxes/lootboxes-infografia.png">
+  <meta property="og:url" content="https://samupsigamer.com/guia-loot-boxes.html">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#171936">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#171936;
+      --purple:#65459a;
+      --purple-dark:#4b3279;
+      --lavender:#eee7fb;
+      --teal:#2b8585;
+      --cream:#fbf5ec;
+      --paper:#fffdf9;
+      --line:#d9cce7;
+      --text:#29283a;
+      --muted:#68657a;
+      --shadow:0 18px 45px rgba(48,35,75,.10);
+      --radius:24px;
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 8% 4%, rgba(111,76,161,.10), transparent 25rem),
+        radial-gradient(circle at 92% 15%, rgba(43,133,133,.08), transparent 22rem),
+        var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.65;
+    }
+
+    a{color:inherit}
+    .wrap{width:min(calc(100% - 40px), var(--max));margin:auto}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:blur(16px);
+      background:rgba(251,245,236,.88);
+      border-bottom:1px solid rgba(75,50,121,.10);
+    }
+    .nav{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      text-decoration:none;
+      font-weight:900;
+      letter-spacing:-.03em;
+      color:var(--navy);
+    }
+    .brand span{color:var(--purple)}
+    .navlinks{display:flex;gap:22px;align-items:center;font-size:.92rem}
+    .navlinks a{text-decoration:none;color:var(--muted);font-weight:700}
+    .navlinks a:hover{color:var(--purple)}
+    .nav-cta{
+      background:var(--navy)!important;
+      color:white!important;
+      padding:10px 16px;
+      border-radius:999px;
+    }
+
+    .hero{padding:74px 0 55px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:52px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.55);
+      border-radius:999px;
+      color:var(--purple-dark);
+      font-size:.82rem;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+    h1{
+      margin:18px 0 18px;
+      font-size:clamp(2.5rem,6vw,5rem);
+      line-height:.98;
+      letter-spacing:-.055em;
+      color:var(--navy);
+    }
+    h1 em{font-style:normal;color:var(--purple)}
+    .lead{
+      max-width:680px;
+      color:var(--muted);
+      font-size:1.18rem;
+      margin:0 0 24px;
+    }
+    .meta{
+      display:flex;flex-wrap:wrap;gap:9px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+    .meta span{
+      background:rgba(255,255,255,.7);
+      border:1px solid var(--line);
+      padding:6px 10px;
+      border-radius:999px;
+    }
+
+    .hero-card{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:12px;
+      box-shadow:var(--shadow);
+      transform:rotate(1deg);
+    }
+    .hero-card img{
+      width:100%;
+      display:block;
+      border-radius:22px;
+    }
+
+    .article{
+      padding:20px 0 90px;
+    }
+    .intro{
+      max-width:790px;
+      margin:0 auto 30px;
+      text-align:center;
+    }
+    .intro p{font-size:1.08rem;color:var(--muted)}
+
+    .toc{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      max-width:820px;
+      margin:0 auto 55px;
+    }
+    .toc a{
+      text-decoration:none;
+      background:#fff;
+      border:1px solid var(--line);
+      padding:8px 14px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:.85rem;
+      color:var(--purple-dark);
+    }
+    .toc a:hover{background:var(--lavender)}
+
+    .section-illustration{
+      margin:0 -4px 24px;
+      display:flex;
+      justify-content:center;
+    }
+    .section-illustration img{
+      width:min(100%, 520px);
+      height:auto;
+      display:block;
+      border-radius:18px;
+      border:1px solid var(--line);
+      box-shadow:0 10px 28px rgba(48,35,75,.08);
+    }
+
+    .section{
+      margin:0 auto 34px;
+      padding:34px;
+      max-width:900px;
+      background:rgba(255,253,249,.88);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:0 12px 35px rgba(48,35,75,.055);
+      scroll-margin-top:90px;
+    }
+    .number{
+      width:44px;height:44px;
+      display:grid;place-items:center;
+      border-radius:13px;
+      background:var(--purple);
+      color:white;
+      font-weight:950;
+      font-size:1.2rem;
+      box-shadow:inset 0 -5px 0 rgba(0,0,0,.12);
+    }
+    h2{
+      margin:14px 0 12px;
+      color:var(--navy);
+      font-size:clamp(1.65rem,3vw,2.35rem);
+      line-height:1.12;
+      letter-spacing:-.035em;
+    }
+    h2 span{color:var(--teal)}
+    h3{color:var(--navy);margin-top:28px}
+    .section p{color:#48465a}
+    .section strong{color:var(--navy)}
+    .section ul{padding-left:20px;margin:14px 0}
+    .section li{margin:8px 0;color:#48465a}
+
+    .callout{
+      margin:24px 0 5px;
+      padding:19px 20px;
+      border-radius:17px;
+      background:var(--lavender);
+      border:1px solid #d8c9ef;
+    }
+    .callout.teal{
+      background:#edf8f7;
+      border-color:#bfe1df;
+    }
+    .callout.warning{
+      background:#fff5ee;
+      border-color:#f0cfba;
+    }
+
+    .mechanism{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin:24px 0 4px;
+    }
+    .mechanism-card{
+      padding:20px;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid var(--line);
+    }
+    .mechanism-card b{display:block;color:var(--purple-dark);margin-bottom:7px}
+
+    .flow{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin:25px 0;
+    }
+    .flow div{
+      padding:11px 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      font-weight:800;
+      font-size:.9rem;
+    }
+    .arrow{font-size:1.25rem;color:var(--purple)}
+
+    .pity{
+      background:linear-gradient(135deg,#f4eefc,#eef8f7);
+      border:1px solid var(--line);
+      padding:25px;
+      border-radius:20px;
+      margin-top:22px;
+    }
+    .pity-bar{
+      height:12px;
+      border-radius:999px;
+      background:#ddd4e9;
+      overflow:hidden;
+      margin:15px 0 8px;
+    }
+    .pity-bar span{
+      display:block;
+      width:82%;
+      height:100%;
+      background:linear-gradient(90deg,var(--teal),var(--purple));
+      border-radius:inherit;
+    }
+    .pity-labels{
+      display:flex;justify-content:space-between;
+      color:var(--muted);font-size:.83rem;
+    }
+
+    .myth{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:15px;
+      margin-top:22px;
+    }
+    .myth > div{
+      padding:20px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .myth .no{background:#fff5f2}
+    .myth .yes{background:#f1faf8}
+    .label{
+      font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;
+      font-weight:950;margin-bottom:6px;
+    }
+
+    .infographic{
+      max-width:900px;
+      margin:48px auto;
+      text-align:center;
+    }
+    .infographic img{
+      width:100%;
+      border-radius:25px;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+    .caption{font-size:.82rem;color:var(--muted);margin-top:10px}
+
+    .country-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin:24px 0 4px;
+    }
+    .country-card{
+      padding:20px;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid var(--line);
+    }
+    .country-card .flag{font-size:1.4rem;margin-bottom:6px;display:block}
+    .country-card b{display:block;color:var(--purple-dark);margin-bottom:4px}
+    .country-card .year{
+      display:inline-block;
+      margin-top:8px;
+      font-size:.78rem;
+      color:var(--muted);
+      background:var(--lavender);
+      padding:3px 9px;
+      border-radius:999px;
+      font-weight:800;
+    }
+
+    .checklist{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:15px;
+      margin-top:22px;
+    }
+    .checklist > div{
+      padding:22px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .checklist h4{margin:0 0 10px;color:var(--navy)}
+
+    .faq-item{margin-top:26px}
+    .faq-item:first-child{margin-top:6px}
+    .faq-item h3{margin-top:0;font-size:1.08rem}
+
+    .evidence{
+      max-width:900px;
+      margin:55px auto 34px;
+      padding:34px;
+      border-radius:var(--radius);
+      background:var(--navy);
+      color:#fff;
+    }
+    .evidence h2{color:#fff}
+    .evidence p,.evidence li{color:#e5e3ee}
+    .evidence a{color:#bde5e3}
+    .sources{padding-left:20px}
+    .sources li{margin:10px 0}
+
+    .cta{
+      max-width:900px;
+      margin:34px auto 0;
+      padding:42px;
+      border-radius:28px;
+      background:
+        radial-gradient(circle at 88% 20%, rgba(255,255,255,.15), transparent 12rem),
+        linear-gradient(135deg,var(--purple-dark),var(--purple));
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+    .cta h2{color:#fff;margin-top:0}
+    .cta p{color:#eeeaf5}
+    .buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .button{
+      display:inline-block;
+      text-decoration:none;
+      font-weight:900;
+      padding:12px 18px;
+      border-radius:999px;
+      background:#fff;
+      color:var(--purple-dark);
+    }
+    .button.alt{
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.3);
+    }
+
+    footer{
+      padding:30px 0 55px;
+      color:var(--muted);
+      text-align:center;
+      font-size:.9rem;
+    }
+
+    @media(max-width:850px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero{padding-top:48px}
+      .hero-card{max-width:700px;margin:auto}
+      .mechanism{grid-template-columns:1fr}
+      .country-grid{grid-template-columns:1fr}
+      .checklist{grid-template-columns:1fr}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(calc(100% - 26px), var(--max))}
+      .navlinks a:not(.nav-cta){display:none}
+      .section,.evidence,.cta{padding:24px}
+      .myth{grid-template-columns:1fr}
+      h1{font-size:2.7rem}
+      .lead{font-size:1.05rem}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Samu<span>·psicólogo gamer</span></a>
+      <nav class="navlinks" aria-label="Navegación">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a class="nav-cta" href="index.html#hablamos">Hablamos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Guía completa · Gaming · Psicología</div>
+          <h1>Loot boxes: <em>la guía completa</em> para entender por qué cuesta tanto dejar de abrirlas</h1>
+          <p class="lead">
+            No es solo una caja virtual. La incertidumbre, la anticipación, las recompensas variables
+            y los sistemas de garantía pueden convertir una apertura en una experiencia diseñada para
+            que quieras repetirla. Aquí tienes cómo funcionan, qué dice la ley y qué señales conviene vigilar.
+          </p>
+          <div class="meta">
+            <span>🎮 Videojuegos</span>
+            <span>🧠 Psicología</span>
+            <span>💸 Monetización</span>
+            <span>⚖️ Legislación</span>
+            <span>⏱ Lectura: 12 min</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="assets/lootboxes/lootboxes-infografia.png" alt="Infografía sobre cómo funcionan las loot boxes">
+        </div>
+      </div>
+    </section>
+
+    <article class="article">
+      <div class="wrap">
+        <div class="intro">
+          <h2>La clave no está solo en <span>lo que recibes</span></h2>
+          <p>
+            Cuando hablamos de loot boxes solemos pensar en la recompensa final. Pero la experiencia
+            empieza bastante antes: en el momento en que aparece la oportunidad de abrir una caja,
+            vemos sus efectos, escuchamos el sonido y pensamos en qué podría tocar. Esta guía recorre
+            el mecanismo completo, de la psicología al marco legal, para que puedas mirar estas mecánicas
+            con más criterio.
+          </p>
+        </div>
+
+        <nav class="toc" aria-label="Índice de la guía">
+          <a href="#que-es">1. Qué es</a>
+          <a href="#incertidumbre">2. Incertidumbre</a>
+          <a href="#puesta-en-escena">3. Puesta en escena</a>
+          <a href="#refuerzo-variable">4. Refuerzo variable</a>
+          <a href="#dinero">5. El dinero</a>
+          <a href="#pity">6. Pity y garantías</a>
+          <a href="#senales">7. Señales de alerta</a>
+          <a href="#ley">8. Qué dice la ley</a>
+          <a href="#consejos">9. Consejos prácticos</a>
+          <a href="#faq">10. Preguntas frecuentes</a>
+        </nav>
+
+        <section class="section" id="que-es">
+          <div class="section-illustration">
+            <img src="assets/lootboxes/lootbox-1.png" alt="Ilustración de la sección 1 de la infografía sobre loot boxes">
+          </div>
+          <div class="number">1</div>
+          <h2>¿Qué es una <span>loot box</span>?</h2>
+          <p>
+            Una loot box es una recompensa virtual cuyo contenido no conocemos antes de abrirla.
+            Puede conseguirse jugando, mediante eventos o, en muchos títulos, comprándose con dinero
+            real o con una moneda virtual que hemos adquirido.
+          </p>
+          <p>
+            La característica importante para entender su funcionamiento psicológico es sencilla:
+            <strong>pagas o inviertes recursos sin saber exactamente qué vas a recibir</strong>.
+          </p>
+          <p>
+            Existen variantes: cajas gratuitas que se ganan jugando, cajas de pago directo, sistemas de
+            "gacha" (habituales en juegos móviles), cofres de temporada o pases de batalla con tramos
+            aleatorios. El envoltorio cambia, pero la mecánica de fondo —pagar por una probabilidad— es
+            la misma en todos los casos.
+          </p>
+        </section>
+
+        <section class="section" id="incertidumbre">
+          <div class="section-illustration">
+            <img src="assets/lootboxes/lootbox-2.png" alt="Ilustración de la sección 2 de la infografía sobre loot boxes">
+          </div>
+          <div class="number">2</div>
+          <h2>La gracia está en <span>no saber qué toca</span></h2>
+          <p>
+            Si supiéramos de antemano que dentro hay exactamente el objeto que queremos, la experiencia
+            sería diferente. La incertidumbre introduce curiosidad y anticipación.
+          </p>
+
+          <div class="flow">
+            <div>¿Qué habrá?</div><span class="arrow">→</span>
+            <div>Espero</div><span class="arrow">→</span>
+            <div>Abro</div><span class="arrow">→</span>
+            <div>Descubro</div>
+          </div>
+
+          <div class="callout teal">
+            <strong>Y aquí aparece una trampa cognitiva muy humana:</strong>
+            puedes querer la recompensa aunque todavía no sepas cuál es. La expectativa ya forma
+            parte de la experiencia.
+          </div>
+        </section>
+
+        <section class="section" id="puesta-en-escena">
+          <div class="section-illustration">
+            <img src="assets/lootboxes/lootbox-3.png" alt="Ilustración de la sección 3 de la infografía sobre loot boxes">
+          </div>
+          <div class="number">3</div>
+          <h2>La caja no empieza <span>cuando la abres</span></h2>
+          <p>
+            Muchos juegos convierten la apertura en una pequeña puesta en escena. Antes de conocer
+            la recompensa pueden aparecer animaciones, destellos, sonidos, música, rarezas,
+            probabilidades o una cuenta atrás.
+          </p>
+
+          <div class="mechanism">
+            <div class="mechanism-card">
+              <b>👁 Lo que ves</b>
+              Diseño llamativo, colores, rareza, probabilidades y efectos visuales.
+            </div>
+            <div class="mechanism-card">
+              <b>🔊 Lo que escuchas</b>
+              Sonidos y música que pueden aumentar la tensión y la emoción.
+            </div>
+            <div class="mechanism-card">
+              <b>⏳ Lo que esperas</b>
+              La anticipación se convierte en parte de la recompensa.
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="refuerzo-variable">
+          <div class="section-illustration">
+            <img src="assets/lootboxes/lootbox-4.png" alt="Ilustración de la sección 4 de la infografía sobre loot boxes">
+          </div>
+          <div class="number">4</div>
+          <h2>El cerebro aprende de <span>lo que ocurre después</span></h2>
+          <p>
+            Imagina esta secuencia: abres una caja, algunas veces aparece algo que te gusta y otras
+            veces no. Cuando la recompensa es impredecible, el aprendizaje no desaparece simplemente
+            porque haya aperturas malas.
+          </p>
+
+          <div class="flow">
+            <div>Abro caja</div><span class="arrow">→</span>
+            <div>A veces toca algo bueno</div><span class="arrow">→</span>
+            <div>“Puede merecer la pena seguir”</div><span class="arrow">↺</span>
+          </div>
+
+          <div class="callout">
+            <strong>Esto se relaciona con el refuerzo variable:</strong>
+            una recompensa que aparece de forma impredecible puede mantener una conducta durante
+            más tiempo que una recompensa que siempre llega de la misma manera. Es el mismo principio
+            que explica por qué las máquinas tragaperras son tan difíciles de soltar.
+          </div>
+        </section>
+
+        <section class="section" id="dinero">
+          <div class="section-illustration">
+            <img src="assets/lootboxes/lootbox-5.png" alt="Ilustración de la sección 5 de la infografía sobre loot boxes">
+          </div>
+          <div class="number">5</div>
+          <h2>Cuando entra <span>el dinero</span></h2>
+          <p>
+            Aquí cambia una parte importante del problema. El jugador ya no está invirtiendo solo
+            tiempo: puede estar pagando por la posibilidad de que aparezca algo valioso.
+          </p>
+
+          <div class="myth">
+            <div class="yes">
+              <div class="label">Importante</div>
+              <strong>El dinero no garantiza una mejor recompensa.</strong>
+              En una loot box de contenido aleatorio, pagar más puede significar simplemente realizar
+              más intentos.
+            </div>
+            <div class="no">
+              <div class="label">Pero ojo</div>
+              <strong>La investigación no permite decir “loot box = adicción”.</strong>
+              Muchos resultados son correlacionales: encontrar una relación no demuestra por sí solo
+              que comprar loot boxes cause un problema de juego o de apuestas.
+            </div>
+          </div>
+
+          <p>
+            La conversión de dinero real en moneda virtual (gemas, créditos, gold...) también cumple
+            una función psicológica: al alejar el pago del gesto de sacar la tarjeta, es más fácil
+            perder la cuenta de cuánto se ha gastado realmente.
+          </p>
+        </section>
+
+        <section class="section" id="pity">
+          <div class="section-illustration">
+            <img src="assets/lootboxes/lootbox-6.png" alt="Ilustración de la sección 6 de la infografía sobre loot boxes">
+          </div>
+          <div class="number">6</div>
+          <h2>Pity y <span>garantías</span></h2>
+          <p>
+            Algunos juegos introducen sistemas de <em>pity</em> o garantía: si no obtienes una
+            recompensa determinada después de X intentos, el juego asegura que aparecerá.
+          </p>
+
+          <div class="pity">
+            <strong>Ejemplo: garantía a 90 tiradas</strong>
+            <div class="pity-bar"><span></span></div>
+            <div class="pity-labels"><span>0 intentos</span><span>“Me faltan 20…”</span><span>90 → recompensa</span></div>
+          </div>
+
+          <p>
+            Saber que existe un límite puede producir una sensación de control y hacer que el jugador
+            piense: <strong>“ya he llegado hasta aquí; sería una pena parar ahora”</strong>.
+          </p>
+
+          <div class="callout warning">
+            <strong>La garantía no elimina la incertidumbre.</strong>
+            La convierte en una cuenta atrás. Y esa cuenta atrás puede hacer más fácil justificar
+            el siguiente intento.
+          </div>
+        </section>
+
+        <section class="section" id="senales">
+          <div class="number">7</div>
+          <h2>Señales de <span>alerta</span></h2>
+          <p>
+            No todo el mundo que abre loot boxes desarrolla un problema. Pero hay señales que, si
+            aparecen juntas o se repiten, merece la pena tomarse en serio.
+          </p>
+
+          <div class="mechanism">
+            <div class="mechanism-card">
+              <b>💳 Con el dinero</b>
+              Gastar más de lo previsto, perder la cuenta del total, pedir dinero prestado o usar
+              tarjetas ajenas para seguir abriendo cajas.
+            </div>
+            <div class="mechanism-card">
+              <b>🙈 Con la conducta</b>
+              Ocultar compras a la familia, mentir sobre cuánto se ha gastado o jugar a escondidas
+              para evitar comentarios.
+            </div>
+            <div class="mechanism-card">
+              <b>😣 Con las emociones</b>
+              Irritabilidad si no se puede abrir una caja, necesidad de "recuperar" lo invertido o
+              malestar que solo se calma volviendo a intentarlo.
+            </div>
+          </div>
+
+          <div class="callout warning">
+            <strong>Una señal aislada no es un diagnóstico.</strong>
+            Lo relevante es el patrón: cuando abrir cajas empieza a condicionar decisiones económicas,
+            el estado de ánimo o las relaciones, es un buen momento para pedir ayuda o hablar con
+            alguien de confianza.
+          </div>
+        </section>
+
+        <section class="section" id="ley">
+          <div class="number">8</div>
+          <h2>¿Qué dice <span>la ley</span>?</h2>
+          <p>
+            No existe un consenso internacional sobre si las loot boxes deben tratarse como juego de
+            azar. Cada país ha tomado un camino distinto, y la situación sigue cambiando.
+          </p>
+
+          <div class="country-grid">
+            <div class="country-card">
+              <span class="flag">🇧🇪</span>
+              <b>Bélgica</b>
+              La Comisión de Juego consideró que las loot boxes pagadas son juego de azar y pidió
+              su retirada del mercado belga.
+              <span class="year">Desde 2018</span>
+            </div>
+            <div class="country-card">
+              <span class="flag">🇳🇱</span>
+              <b>Países Bajos</b>
+              Un tribunal determinó que ciertos sobres de FIFA Ultimate Team constituían juego de azar,
+              lo que llevó a ajustes en ese mercado.
+              <span class="year">Desde 2018</span>
+            </div>
+            <div class="country-card">
+              <span class="flag">🇨🇳🇯🇵</span>
+              <b>China y Japón</b>
+              Exigen publicar las probabilidades de cada objeto y limitan ciertos mecanismos de tipo
+              "gacha" especialmente lesivos, sin prohibir las loot boxes en general.
+              <span class="year">Desde 2017-2019</span>
+            </div>
+            <div class="country-card">
+              <span class="flag">🇬🇧🇪🇺</span>
+              <b>Reino Unido y UE</b>
+              De momento no las clasifican como juego de azar, pero llevan años revisando la cuestión
+              y apuestan por medidas de protección al consumidor (información de probabilidades,
+              controles de gasto) antes que por una prohibición.
+              <span class="year">En revisión</span>
+            </div>
+          </div>
+
+          <div class="callout">
+            <strong>El debate de fondo:</strong> ¿basta con que exista incertidumbre y dinero real para
+            hablar de juego de azar, o hace falta que el premio tenga valor de reventa fuera del juego?
+            La respuesta a esa pregunta es, en buena medida, lo que separa la postura de unos países
+            de la de otros.
+          </div>
+        </section>
+
+        <section class="section" id="consejos">
+          <div class="number">9</div>
+          <h2>Consejos <span>prácticos</span></h2>
+          <p>
+            No hace falta dejar de jugar para tener una relación más sana con las loot boxes. Estas
+            son algunas ideas que suelen ayudar.
+          </p>
+
+          <div class="checklist">
+            <div>
+              <h4>Si eres quien juega</h4>
+              <ul>
+                <li>Fíjate un presupuesto antes de abrir cualquier caja, no después.</li>
+                <li>Mira las probabilidades publicadas antes de gastar (muchos juegos ya las muestran).</li>
+                <li>Desactiva el guardado de tarjeta para que cada compra requiera un paso extra.</li>
+                <li>Pregúntate si seguirías abriendo si no hubiera animación ni sonido.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Si acompañas a un menor</h4>
+              <ul>
+                <li>Revisa juntos qué juegos incluyen loot boxes y cómo funcionan sus probabilidades.</li>
+                <li>Configura controles parentales y límites de gasto en la cuenta del dispositivo.</li>
+                <li>Habla de estas mecánicas con curiosidad, no solo con prohibición.</li>
+                <li>Observa cambios de humor asociados a "rachas malas" al abrir cajas.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section faq" id="faq">
+          <div class="number">10</div>
+          <h2>Preguntas <span>frecuentes</span></h2>
+
+          <div class="faq-item">
+            <h3>¿Las loot boxes son juego de azar?</h3>
+            <p>
+              Depende del país. Comparten elementos con el juego de azar (pagar por un resultado
+              incierto), pero legalmente solo algunos estados las tratan como tal, normalmente cuando
+              el premio puede convertirse en dinero o revenderse fuera del juego.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Abrir loot boxes significa que tengo un problema?</h3>
+            <p>
+              No necesariamente. Muchas personas las abren de forma ocasional sin que interfiera en su
+              vida diaria. El problema aparece cuando compromete el dinero, el tiempo o el estado de
+              ánimo de forma sostenida.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Los sistemas pity hacen que sea menos arriesgado?</h3>
+            <p>
+              Reducen la incertidumbre sobre el resultado final, pero no eliminan el patrón de refuerzo
+              variable que ocurre en cada intento anterior a la garantía.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Qué puedo hacer si creo que estoy gastando más de la cuenta?</h3>
+            <p>
+              Empieza por registrar durante una semana cuánto gastas realmente. Después, pon límites
+              técnicos (desactivar tarjeta guardada, controles de gasto) y, si el patrón no cambia,
+              busca apoyo profesional: no es un fallo de fuerza de voluntad, es una mecánica diseñada
+              para ser difícil de soltar.
+            </p>
+          </div>
+        </section>
+      </div>
+
+        <section class="evidence">
+          <h2>¿Qué dice la investigación?</h2>
+          <p>
+            La evidencia disponible ha encontrado asociaciones entre el gasto en loot boxes y
+            medidas de juego problemático. Por ejemplo, Zendle y Cairns encontraron una relación
+            entre el gasto en loot boxes y la gravedad del juego problemático, y una replicación
+            posterior volvió a observar una asociación similar. Un tercer estudio del mismo equipo
+            observó que esa relación se mantenía con independencia de características concretas
+            del sistema, como poder retirar el contenido o si la loot box daba ventaja competitiva.
+          </p>
+          <p>
+            Esto <strong>no significa que abrir una loot box provoque automáticamente un trastorno</strong>.
+            La dirección de la relación y los factores que explican esas asociaciones son cuestiones
+            que la investigación sigue estudiando: es posible que las personas con más dificultades
+            previas gasten más en loot boxes, que el gasto en loot boxes favorezca esas dificultades,
+            o que ambas cosas se retroalimenten.
+          </p>
+
+          <ul class="sources">
+            <li>
+              Zendle, D. & Cairns, P. (2018). <em>Video game loot boxes are linked to problem gambling:
+              Results of a large-scale survey.</em>
+              <a href="https://doi.org/10.1371/journal.pone.0206767" target="_blank" rel="noopener">PLOS ONE</a>.
+            </li>
+            <li>
+              Zendle, D. & Cairns, P. (2019). <em>Loot boxes are again linked to problem gambling:
+              Results of a replication study.</em>
+              <a href="https://doi.org/10.1371/journal.pone.0213194" target="_blank" rel="noopener">PLOS ONE</a>.
+            </li>
+            <li>
+              Zendle, D., Cairns, P., Barnett, H. & McCall, C. (2020).
+              <em>Paying for loot boxes is linked to problem gambling, regardless of specific features
+              like cash-out and pay-to-win.</em>
+              <a href="https://doi.org/10.1016/j.chb.2019.07.003" target="_blank" rel="noopener">Computers in Human Behavior</a>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="cta">
+          <h2>No se trata de demonizar los videojuegos.</h2>
+          <p>
+            Se trata de entender qué hay detrás de las mecánicas que usamos, qué nos hace seguir
+            jugando y cuándo una decisión que parece pequeña empieza a generar problemas.
+          </p>
+          <p><strong>¿Te interesa la psicología detrás de los videojuegos y la tecnología?</strong></p>
+          <div class="buttons">
+            <a class="button" href="index.html#portfolio">Ver más recursos</a>
+            <a class="button alt" href="https://www.instagram.com/samu.psigamer/" target="_blank" rel="noopener">Instagram @samu.psigamer</a>
+          </div>
+        </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Samu · Psicólogo Gamer · Salud mental, videojuegos y familias
+    </div>
+  </footer>
+</body>
+</html>

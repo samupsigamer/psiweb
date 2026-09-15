@@ -251,3 +251,26 @@ terminal para nada, simplemente abre `index.html` haciendo doble clic.
   `familias.png`, `recursos.png` y `habitos.png`. Para cambiar alguna,
   sustituye el archivo correspondiente por otra imagen con fondo
   transparente (PNG) del mismo estilo.
+- El botón "Escríbeme" al final de `sobre-mi.html` y de las 4 páginas de
+  categoría (`divulgacion.html`, `familias.html`, `recursos.html`,
+  `habitos-digitales.html`) ahora abre WhatsApp directamente, igual que
+  el resto de botones "Escríbeme" del sitio (antes bajaba a la sección
+  de contacto de la portada).
+- **Nueva página `guia-loot-boxes.html`**: la guía larga sobre loot
+  boxes (infografía + 10 apartados: qué son, incertidumbre, refuerzo
+  variable, pity, señales de alerta, legislación por país, consejos y
+  preguntas frecuentes). Tiene su propio diseño claro, distinto del
+  resto del sitio oscuro, pensado como página de "guía descargable".
+  Desde `loot-boxes.html` hay un aviso destacado ("¿Quieres entrar en
+  detalle?") que enlaza a esta guía. Sus imágenes viven en
+  `assets/lootboxes/` (`lootboxes-infografia.png` y `lootbox-1.png` a
+  `lootbox-6.png`).
+- **Nueva sección "Servicios"** en la portada (`index.html`, entre
+  Portfolio e Intereses, `id="servicios"`), con 3 tarjetas de precio
+  orientativas (Sesión individual, Orientación a familias — destacada — 
+  y Pack de seguimiento) más una línea final para charlas o talleres a
+  medida. Los precios son de ejemplo: para cambiarlos, abre `index.html`
+  y busca `id="servicios"` — cada tarjeta es un bloque
+  `<article class="pricing-card">` con su importe en
+  `<span class="value">`. Se añadió también al menú y al pie de página
+  de todas las páginas.

@@ -235,6 +235,15 @@ svg{ width: 1em; height: 1em; fill: currentColor; }
 .btn-primary:hover .arrow{ transform: translateX(4px); }
 .btn-small{ padding: 10px 20px; font-size: .85rem; }
 .btn-wide{ width: 100%; margin-top: 6px; }
+.btn-secondary{
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(168,63,247,.45);
+}
+.btn-secondary:hover{
+  border-color: rgba(168,63,247,.8);
+  background: rgba(168,63,247,.1);
+}
 
 /* ================= LAYOUT HELPERS ================= */
 .section{ position: relative; z-index: 1; padding: 110px 0; }
@@ -326,6 +335,131 @@ svg{ width: 1em; height: 1em; fill: currentColor; }
 .quote-mark-close{
   margin-right: 0;
   margin-left: 2px;
+}
+
+/* aviso/enlace a una guía o pieza extendida dentro de un artículo del portfolio */
+.guide-banner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 30px 0 24px;
+  padding: 24px 26px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(104,59,255,.22), rgba(168,63,247,.1));
+  border: 1px solid rgba(168,63,247,.35);
+}
+.guide-banner-text p.eyebrow{ margin-bottom: 6px; }
+.guide-banner-text h3{
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  color: var(--white);
+}
+.guide-banner-text p{
+  color: var(--ink-dim);
+  font-size: .92rem;
+  margin: 0;
+}
+.guide-banner .btn{ flex-shrink: 0; white-space: nowrap; }
+@media (max-width: 560px){
+  .guide-banner{ flex-direction: column; align-items: stretch; }
+  .guide-banner .btn{ justify-content: center; }
+}
+
+/* ================= SERVICIOS / PRECIOS ================= */
+.pricing-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid rgba(168,63,247,.2);
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.pricing-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(168,63,247,.55);
+  box-shadow: var(--shadow-glow);
+}
+.pricing-card.is-featured{
+  border-color: rgba(168,63,247,.6);
+  background: linear-gradient(160deg, rgba(104,59,255,.14), var(--bg-card) 60%);
+}
+.pricing-badge{
+  position: absolute;
+  top: -13px;
+  left: 26px;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--grad-purple);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+.pricing-card h3{
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.pricing-card .pricing-audience{
+  color: var(--ink-dim);
+  font-size: .88rem;
+  margin-bottom: 18px;
+}
+.pricing-amount{
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+}
+.pricing-amount .value{
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.pricing-amount .unit{
+  color: var(--ink-dim);
+  font-size: .9rem;
+}
+.pricing-note{
+  color: var(--ink-dim);
+  font-size: .82rem;
+  margin-bottom: 20px;
+}
+.pricing-list{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+.pricing-list li{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: .9rem;
+  color: var(--ink-dim);
+}
+.pricing-list svg{
+  flex-shrink: 0;
+  width: 18px; height: 18px;
+  margin-top: 2px;
+  fill: var(--purple-2);
+}
+.pricing-card .btn{ width: 100%; justify-content: center; }
+.pricing-footnote{
+  text-align: center;
+  color: var(--ink-dim);
+  font-size: .9rem;
+  margin-top: 32px;
 }
 
 .qh-inline{
