@@ -1,0 +1,29 @@
+Carpeta para los PDF descargables del portfolio
+=================================================
+
+Guarda aquí los PDF que quieras ofrecer como descarga en una pieza del
+portfolio (los que aparecen con el botón "Descargar PDF" en cada tarjeta
+de index.html).
+
+Cómo añadir uno nuevo
+----------------------
+1. Pon el archivo aquí con el mismo nombre que la pieza (su "slug"),
+   por ejemplo: kit-educadores.pdf, glosario-gamer.pdf...
+   El nombre de cada pieza es el mismo que el de su página .html
+   (kit-educadores.html -> kit-educadores.pdf).
+
+2. Abre index.html, busca esa tarjeta dentro de
+   <div class="portfolio-track" id="portfolioTrack"> y:
+
+   a) Cambia data-downloadable="false" por data-downloadable="true".
+
+   b) Dentro de <div class="portfolio-card-actions">, justo después del
+      botón "Leer artículo", añade esta línea (cambiando el nombre del
+      archivo):
+
+      <a href="assets/descargables/tu-pieza.pdf" class="card-btn card-btn-ghost" download>Descargar PDF</a>
+
+3. Guarda y ya está: el botón de descarga y el filtro "Contenido
+   descargable" la reconocerán automáticamente.
+
+Si prefieres, dime qué piezas quieres con PDF y lo hago yo directamente.

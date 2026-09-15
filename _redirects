@@ -8,5 +8,13 @@
 #
 # /viejo-enlace   /nuevo-enlace   301
 # /blog/*         https://blog.samupsigamer.com/:splat   301
-#
-# De momento no hay redirecciones activas.
+
+# Las 4 páginas de categoría (divulgacion, familias, recursos,
+# habitos-digitales) se eliminaron: ahora cada pieza enlaza directo
+# desde la portada y el filtrado por categoría vive en la sección
+# Portfolio. Estas reglas evitan que enlaces antiguos (por ejemplo,
+# indexados en Google) den 404.
+/divulgacion.html          /?cat=divulgacion#portfolio   301
+/familias.html              /?cat=familias#portfolio      301
+/recursos.html               /?cat=recursos#portfolio      301
+/habitos-digitales.html      /?cat=habitos#portfolio       301

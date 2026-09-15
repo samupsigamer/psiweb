@@ -11,23 +11,68 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://samupsigamer.com/divulgacion.html</loc>
+    <loc>https://samupsigamer.com/por-que-enganchan.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://samupsigamer.com/familias.html</loc>
+    <loc>https://samupsigamer.com/loot-boxes.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://samupsigamer.com/recursos.html</loc>
+    <loc>https://samupsigamer.com/guia-loot-boxes.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://samupsigamer.com/habitos-digitales.html</loc>
+    <loc>https://samupsigamer.com/mitos-salud-mental.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://samupsigamer.com/hablar-tiempo-pantalla.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://samupsigamer.com/senales-alarma.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://samupsigamer.com/acuerdos-familiares.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://samupsigamer.com/checklist-uso-problematico.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://samupsigamer.com/glosario-gamer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://samupsigamer.com/kit-educadores.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://samupsigamer.com/diseno-recompensas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://samupsigamer.com/limites-que-se-mantienen.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://samupsigamer.com/rutina-digital-5-pasos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

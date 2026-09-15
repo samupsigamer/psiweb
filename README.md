@@ -22,96 +22,116 @@ entre salud mental, videojuegos y tecnología. HTML, CSS y JavaScript puros
 ```
 .
 ├── index.html
-├── sobre-mi.html          # Página propia: Sobre mí (antes era una sección de index.html)
-├── divulgacion.html       # Página de detalle: Divulgación psicológica
-├── familias.html          # Página de detalle: Acompañamiento a familias
-├── recursos.html          # Página de detalle: Recursos y herramientas
-├── habitos-digitales.html # Página de detalle: Diseño de hábitos digitales
+├── sobre-mi.html               # Página propia: Sobre mí
+├── por-que-enganchan.html      # Piezas del portfolio: una página HTML
+├── loot-boxes.html             #   independiente por cada pieza, aunque
+├── mitos-salud-mental.html     #   compartan categoría (Divulgación,
+├── hablar-tiempo-pantalla.html #   Familias, Recursos o Hábitos digitales)
+├── senales-alarma.html
+├── acuerdos-familiares.html
+├── checklist-uso-problematico.html
+├── glosario-gamer.html
+├── kit-educadores.html
+├── diseno-recompensas.html
+├── limites-que-se-mantienen.html
+├── rutina-digital-5-pasos.html
+├── guia-loot-boxes.html        # Guía larga (infografía + 10 apartados)
 ├── 404.html
 ├── styles.css
 ├── script.js
 ├── site.webmanifest
 ├── robots.txt
 ├── sitemap.xml
-├── _headers            # Cloudflare Pages: cabeceras HTTP
+├── _headers             # Cloudflare Pages: cabeceras HTTP
 ├── _redirects           # Cloudflare Pages: redirecciones
 ├── favicon.ico
+├── functions/
+│   └── api/
+│       └── views.js     # Cloudflare Pages Function: contador de vistas
 └── assets/
     ├── hero-samu.png
     ├── personajes/                 # Mascota en distintas poses
+    ├── categorias/                 # Ilustraciones de "Cuatro maneras de acompañarte"
+    ├── lootboxes/                  # Imágenes de la guía de loot boxes
+    ├── descargables/               # PDF descargables del portfolio (ver más abajo)
     └── brand/                      # Identidad de marca
         ├── icon-16.png, icon-32.png, icon-180.png, icon-192.png, icon-512.png
         ├── apple-touch-icon.png
         └── og-image.png            # Imagen para compartir en redes
 ```
 
-### La sección "Portfolio" (nueva)
+### La sección "Portfolio"
 
-En `index.html`, entre el "Sobre mí" y "Qué hago" hay una nueva sección
-`id="portfolio"` pensada para mostrar tu trabajo de divulgación como
-piezas de un portfolio: cada tarjeta tiene una etiqueta de formato
-(Artículo, Vídeo, Guía descargable...), un título y una descripción
-corta, y enlaza a una pieza concreta dentro de la página de detalle que
-corresponda (por ejemplo `divulgacion.html#por-que-enganchan`).
+En `index.html`, entre "Qué hago" y "Servicios" hay una sección
+`id="portfolio"` con un carrusel horizontal de piezas: cada tarjeta
+tiene una etiqueta de formato (Artículo, Vídeo, Guía descargable...),
+un título, una descripción corta y, en su pie:
+
+- Un botón **"Leer artículo"** que lleva directo a la página propia de
+  esa pieza (por ejemplo `por-que-enganchan.html`) — no hay páginas de
+  categoría intermedias.
+- Un botón **"Descargar PDF"**, solo en las piezas que tengan un PDF
+  asociado (ver la sección "PDF descargables" más abajo).
+- Un contador de vistas (icono de ojo) — ver "Contador de vistas".
 
 Arriba de la rejilla hay botones de filtro (Todo / Divulgación /
-Familias / Recursos / Hábitos digitales) que muestran u ocultan tarjetas
-según la categoría — funciona con JavaScript puro, sin recargar la
-página (mira `script.js`, bloque "Filtro del portfolio").
+Familias / Recursos / Hábitos digitales / Contenido descargable) que
+muestran u ocultan tarjetas según la categoría o si tienen PDF —
+funciona con JavaScript puro, sin recargar la página (`script.js`,
+bloque "Filtro del portfolio").
 
 Para **añadir, quitar o editar una pieza**:
 
-1. Abre `index.html`, busca `<div class="portfolio-grid">` y edita/añade
-   una tarjeta `<a class="feature-card portfolio-card is-link" ...>`.
+1. Abre `index.html`, busca `<div class="portfolio-track" id="portfolioTrack">`
+   y edita/añade una tarjeta `<article class="feature-card portfolio-card" ...>`.
    El atributo `data-category` debe ser uno de: `divulgacion`,
-   `familias`, `recursos`, `habitos` (así el filtro la reconoce).
-2. Si quieres que la pieza tenga su propio detalle dentro de la página
-   correspondiente, añade también un bloque `<article class="piece-card"
-   id="...">` dentro de la sección "Piezas destacadas" de esa página
-   (por ejemplo, en `familias.html`). El `id` debe coincidir con el que
-   usas en el `href="familias.html#ese-id"` de la tarjeta del home.
+   `familias`, `recursos`, `habitos` (así el filtro la reconoce), y el
+   botón "Leer artículo" debe apuntar al archivo `.html` de esa pieza.
+2. Crea esa página `.html` siguiendo el mismo patrón que las existentes
+   (copia una parecida y cambia el contenido).
 
-Las páginas de detalle (`divulgacion.html`, `familias.html`,
-`recursos.html`, `habitos-digitales.html`) mantienen todo lo que ya
-tenían (introducción, cita, "Explora también" y llamada a la acción) y
-ahora incluyen además esa sección "Piezas destacadas" arriba del todo.
+### PDF descargables
+
+La carpeta `assets/descargables/` es donde guardar los PDF de las
+piezas que quieras ofrecer para descargar (dentro tienes un `LEEME.txt`
+con los pasos exactos). Resumen:
+
+1. Guarda el PDF ahí con el mismo nombre que la pieza, por ejemplo
+   `kit-educadores.pdf`.
+2. En `index.html`, en la tarjeta de esa pieza, cambia
+   `data-downloadable="false"` por `"true"` y añade el botón
+   `<a href="assets/descargables/kit-educadores.pdf" class="card-btn card-btn-ghost" download>Descargar PDF</a>`
+   dentro de `.portfolio-card-actions`.
+
+De momento solo **Loot boxes** tiene PDF
+(`assets/descargables/loot-boxes.pdf`, generado a partir de
+`guia-loot-boxes.html`).
+
+### Contador de vistas
+
+Cada tarjeta del portfolio tiene un contador (icono de ojo + número)
+que cuenta vistas únicas por dispositivo. Necesita una KV namespace de
+Cloudflare enlazada como `VIEWS` (Settings → Functions → KV namespace
+bindings en tu proyecto de Pages) — el código ya está en
+`functions/api/views.js`. Sin esa KV, el sitio funciona igual y los
+contadores simplemente se quedan en 0.
 
 ### La página "Sobre mí"
 
-El enlace "Sobre mí" del menú (arriba en todas las páginas) ya no hace
-scroll dentro de `index.html`: lleva a su propia página, `sobre-mi.html`,
-con el mismo contenido de presentación más una sección de "Formación,
-enfoque y experiencia" y enlaces a las 4 páginas de "Qué hago".
-
-### Las 4 páginas de "Qué hago"
-
-Las cuatro tarjetas de la sección "Cuatro maneras de acompañarte" (en
-`index.html`) son enlaces a su propia página de detalle, con el
-mismo diseño y estilo del resto del sitio (cabecera, pie, tarjetas, cita
-destacada). Cada página incluye:
-
-- Un enlace "← Volver a Qué hago" arriba.
-- Una introducción al tema con 3 puntos clave.
-- Una cita destacada.
-- Enlaces a las otras 3 páginas ("Explora también").
-- Una llamada a la acción hacia el formulario de contacto.
-
-Para editar el contenido de cualquiera de ellas, abre el archivo `.html`
-correspondiente directamente: el texto está en español plano, sin
-necesidad de tocar el CSS.
+El enlace "Sobre mí" del menú lleva a su propia página, `sobre-mi.html`,
+con el contenido de presentación, una sección de "Formación, enfoque y
+experiencia" y las 4 tarjetas informativas de "Cuatro maneras de
+acompañarte" (no son enlaces: para ver el trabajo real remiten al
+Portfolio de la portada).
 
 ### Los 4 iconos del pie de página
 
-Los 4 iconos redondeados del footer (Psicología, Gaming, Familias,
-Prevención) ahora son enlaces reales, cada uno a la página de detalle más
-relacionada:
-
-| Icono       | Lleva a                  |
-|-------------|---------------------------|
-| Psicología  | `divulgacion.html`        |
-| Gaming      | `habitos-digitales.html`  |
-| Familias    | `familias.html`           |
-| Prevención  | `recursos.html`           |
+Los 4 iconos redondeados del footer (Divulgación, Familias, Recursos,
+Hábitos digitales) llevan a la sección Portfolio de la portada con ese
+filtro ya aplicado, por ejemplo `index.html?cat=familias#portfolio`
+(o `?cat=familias#portfolio` si ya estás en la portada). El filtro se
+aplica solo con JavaScript al cargar la página (`script.js`, al final
+del bloque "Filtro del portfolio").
 
 Para cambiar a dónde apunta alguno, busca en cualquier página el bloque
 `<ul class="footer-icons">` y edita el `href` del enlace correspondiente.
@@ -298,3 +318,15 @@ terminal para nada, simplemente abre `index.html` haciendo doble clic.
     cuanto la KV esté enlazada y despliegues de nuevo, los contadores
     funcionan solos (cuentan como mucho una vez por dispositivo y
     pieza, usando la IP de quien visita, sin guardar la IP en claro).
+- **Se eliminaron las 4 páginas de categoría** (`divulgacion.html`,
+  `familias.html`, `recursos.html`, `habitos-digitales.html`). Ahora se
+  salta directo de la portada a cada pieza del portfolio con "Leer
+  artículo", y la categoría solo se usa para el filtrado (botones de
+  filtro en la sección Portfolio). Los iconos del pie de página, que
+  antes llevaban a esas páginas, ahora llevan a la portada con el
+  filtro de esa categoría ya aplicado (`?cat=familias#portfolio`, por
+  ejemplo). Se añadieron redirecciones 301 en `_redirects` desde las
+  URLs antiguas por si algún enlace externo o de Google todavía
+  apunta a ellas.
+- Nueva carpeta `assets/descargables/` (con su `LEEME.txt`) para ir
+  guardando ahí los PDF del contenido descargable del portfolio.

@@ -113,6 +113,14 @@ if (filterBtns.length && portfolioCards.length) {
       }
     });
   });
+
+  // Si se llega con ?cat=divulgacion|familias|recursos|habitos (por ejemplo,
+  // desde los iconos del pie de página), preselecciona ese filtro.
+  const catParam = new URLSearchParams(window.location.search).get('cat');
+  if (catParam) {
+    const matchingBtn = document.querySelector(`.filter-btn[data-filter="${catParam}"]`);
+    if (matchingBtn) matchingBtn.click();
+  }
 }
 
 // ===== Estadísticas animadas (contador ascendente) =====
