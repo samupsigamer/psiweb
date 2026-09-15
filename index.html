@@ -233,6 +233,7 @@
         <button class="filter-btn" data-filter="familias" aria-pressed="false">Familias</button>
         <button class="filter-btn" data-filter="recursos" aria-pressed="false">Recursos</button>
         <button class="filter-btn" data-filter="habitos" aria-pressed="false">Hábitos digitales</button>
+        <button class="filter-btn" data-filter="descargable" aria-pressed="false">Contenido descargable</button>
       </div>
 
       <div class="portfolio-carousel">
@@ -240,89 +241,186 @@
           <svg viewBox="0 0 24 24"><path d="M15 4 6 12l9 8"/></svg>
         </button>
         <div class="portfolio-track" id="portfolioTrack">
-        <a class="feature-card portfolio-card is-link" href="por-que-enganchan.html" data-category="divulgacion">
+        <article class="feature-card portfolio-card" data-category="divulgacion" data-downloadable="false">
           <span class="format-tag cat-divulgacion">Artículo</span>
           <h3>Por qué los videojuegos enganchan (y no es casualidad)</h3>
           <p>Cómo el diseño de recompensas activa la motivación y qué tiene esto de normal.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="por-que-enganchan.html" class="card-btn card-btn-primary" data-track-slug="por-que-enganchan">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="por-que-enganchan">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="loot-boxes.html" data-category="divulgacion">
+        <article class="feature-card portfolio-card" data-category="divulgacion" data-downloadable="true">
           <span class="format-tag cat-divulgacion">Hilo</span>
           <h3>Loot boxes explicadas para una madre o un padre</h3>
           <p>Qué son, cómo funcionan y qué conviene saber antes de decir que sí.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="loot-boxes.html" class="card-btn card-btn-primary" data-track-slug="loot-boxes">Leer artículo <span class="arrow">→</span></a>
+          <a href="assets/descargables/loot-boxes.pdf" class="card-btn card-btn-ghost" download>Descargar PDF</a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="loot-boxes">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="mitos-salud-mental.html" data-category="divulgacion">
+        <article class="feature-card portfolio-card" data-category="divulgacion" data-downloadable="false">
           <span class="format-tag cat-divulgacion">Vídeo</span>
           <h3>Salud mental y gaming: mitos que hay que tirar a la basura</h3>
           <p>Separando el pánico moral de lo que dice realmente la evidencia.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="mitos-salud-mental.html" class="card-btn card-btn-primary" data-track-slug="mitos-salud-mental">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="mitos-salud-mental">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="hablar-tiempo-pantalla.html" data-category="familias">
+        <article class="feature-card portfolio-card" data-category="familias" data-downloadable="false">
           <span class="format-tag cat-familias">Guía descargable</span>
           <h3>Cómo hablar con tu hijo adolescente sobre su tiempo de pantalla</h3>
           <p>Un guion de conversación que no empieza por la bronca.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="hablar-tiempo-pantalla.html" class="card-btn card-btn-primary" data-track-slug="hablar-tiempo-pantalla">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="hablar-tiempo-pantalla">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="senales-alarma.html" data-category="familias">
+        <article class="feature-card portfolio-card" data-category="familias" data-downloadable="false">
           <span class="format-tag cat-familias">Artículo</span>
           <h3>Señales de alarma vs. uso normal: la diferencia real</h3>
           <p>Qué mirar de verdad antes de saltar a la conclusión de "adicción".</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="senales-alarma.html" class="card-btn card-btn-primary" data-track-slug="senales-alarma">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="senales-alarma">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="acuerdos-familiares.html" data-category="familias">
+        <article class="feature-card portfolio-card" data-category="familias" data-downloadable="false">
           <span class="format-tag cat-familias">Plantilla</span>
           <h3>Acuerdos familiares de pantallas que sí funcionan</h3>
           <p>Una plantilla para construir normas entre todos, no para imponerlas.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="acuerdos-familiares.html" class="card-btn card-btn-primary" data-track-slug="acuerdos-familiares">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="acuerdos-familiares">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="checklist-uso-problematico.html" data-category="recursos">
+        <article class="feature-card portfolio-card" data-category="recursos" data-downloadable="false">
           <span class="format-tag cat-recursos">Checklist</span>
           <h3>¿Mi hijo tiene un problema con los videojuegos?</h3>
           <p>Ocho preguntas para hacerte antes de alarmarte.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="checklist-uso-problematico.html" class="card-btn card-btn-primary" data-track-slug="checklist-uso-problematico">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="checklist-uso-problematico">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="glosario-gamer.html" data-category="recursos">
+        <article class="feature-card portfolio-card" data-category="recursos" data-downloadable="false">
           <span class="format-tag cat-recursos">Guía</span>
           <h3>Glosario gamer para padres</h3>
           <p>Loot, grind, streaming, skins... lo esencial para entender de qué hablan.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="glosario-gamer.html" class="card-btn card-btn-primary" data-track-slug="glosario-gamer">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="glosario-gamer">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="kit-educadores.html" data-category="recursos">
+        <article class="feature-card portfolio-card" data-category="recursos" data-downloadable="false">
           <span class="format-tag cat-recursos">Guía descargable</span>
           <h3>Kit de recursos para educadores</h3>
           <p>Material para trabajar hábitos digitales en el aula, sin sermón.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="kit-educadores.html" class="card-btn card-btn-primary" data-track-slug="kit-educadores">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="kit-educadores">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="diseno-recompensas.html" data-category="habitos">
+        <article class="feature-card portfolio-card" data-category="habitos" data-downloadable="false">
           <span class="format-tag cat-habitos">Artículo</span>
           <h3>El diseño de recompensas en los videojuegos, explicado</h3>
           <p>Rachas, recompensas variables y notificaciones: el mecanismo por dentro.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="diseno-recompensas.html" class="card-btn card-btn-primary" data-track-slug="diseno-recompensas">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="diseno-recompensas">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="limites-que-se-mantienen.html" data-category="habitos">
+        <article class="feature-card portfolio-card" data-category="habitos" data-downloadable="false">
           <span class="format-tag cat-habitos">Guía</span>
           <h3>Cómo construir límites de pantalla que se mantengan</h3>
           <p>La diferencia entre una norma que se cumple y una que se pelea cada día.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="limites-que-se-mantienen.html" class="card-btn card-btn-primary" data-track-slug="limites-que-se-mantienen">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="limites-que-se-mantienen">0</span>
+          </span>
+        </div>
+        </article>
 
-        <a class="feature-card portfolio-card is-link" href="rutina-digital-5-pasos.html" data-category="habitos">
+        <article class="feature-card portfolio-card" data-category="habitos" data-downloadable="false">
           <span class="format-tag cat-habitos">Infografía</span>
           <h3>Rutina digital saludable en 5 pasos</h3>
           <p>Un esquema visual simple para ordenar el día con pantallas de por medio.</p>
-          <span class="card-arrow">Ver pieza <span class="arrow">→</span></span>
-        </a>
+        <div class="portfolio-card-footer">
+          <div class="portfolio-card-actions">
+            <a href="rutina-digital-5-pasos.html" class="card-btn card-btn-primary" data-track-slug="rutina-digital-5-pasos">Leer artículo <span class="arrow">→</span></a>
+          </div>
+          <span class="view-counter" aria-label="Vistas de esta pieza">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="view-count" data-piece-count="rutina-digital-5-pasos">0</span>
+          </span>
+        </div>
+        </article>
         </div>
         <button class="carousel-arrow carousel-next" type="button" aria-label="Piezas siguientes">
           <svg viewBox="0 0 24 24"><path d="m9 4 9 8-9 8"/></svg>

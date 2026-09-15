@@ -274,3 +274,27 @@ terminal para nada, simplemente abre `index.html` haciendo doble clic.
   `<article class="pricing-card">` con su importe en
   `<span class="value">`. Se añadió también al menú y al pie de página
   de todas las páginas.
+- **Portfolio: descarga en PDF, lectura directa y contador de vistas.**
+  Cada tarjeta del carrusel de `index.html` (`id="portfolioTrack"`)
+  ahora tiene dos botones — "Leer artículo" (va directo a la pieza) y,
+  solo si esa pieza tiene material descargable, "Descargar PDF" — más
+  un contador de vistas (icono de ojo) abajo a la derecha. También hay
+  un filtro nuevo, "Contenido descargable", que muestra solo las
+  piezas con PDF.
+  - Para marcar una pieza como descargable: en su tarjeta, cambia
+    `data-downloadable="false"` por `"true"` y añade dentro de
+    `.portfolio-card-actions` un enlace
+    `<a href="assets/descargables/tu-pieza.pdf" class="card-btn card-btn-ghost" download>Descargar PDF</a>`.
+  - De momento solo **Loot boxes** tiene PDF
+    (`assets/descargables/loot-boxes.pdf`, generado a partir de
+    `guia-loot-boxes.html`). Dime qué otras piezas quieres con PDF y
+    los genero igual.
+  - **El contador de vistas necesita configurar algo en Cloudflare**
+    (la web sigue funcionando igual sin hacerlo, pero los contadores se
+    quedan en 0): en el panel de tu proyecto de Cloudflare Pages ve a
+    **Settings → Functions → KV namespace bindings** y añade una KV
+    namespace nueva (o una que ya tengas) con el nombre de variable
+    `VIEWS`. El código ya está listo en `functions/api/views.js` — en
+    cuanto la KV esté enlazada y despliegues de nuevo, los contadores
+    funcionan solos (cuentan como mucho una vez por dispositivo y
+    pieza, usando la IP de quien visita, sin guardar la IP en claro).

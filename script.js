@@ -96,7 +96,14 @@ if (filterBtns.length && portfolioCards.length) {
 
       const filter = btn.getAttribute('data-filter');
       portfolioCards.forEach(card => {
-        const show = filter === 'todos' || card.getAttribute('data-category') === filter;
+        let show;
+        if (filter === 'todos') {
+          show = true;
+        } else if (filter === 'descargable') {
+          show = card.getAttribute('data-downloadable') === 'true';
+        } else {
+          show = card.getAttribute('data-category') === filter;
+        }
         card.classList.toggle('is-hidden', !show);
       });
 
@@ -167,4 +174,46 @@ if ('IntersectionObserver' in window) {
   revealTargets.forEach(el => revealObserver.observe(el));
 } else {
   revealTargets.forEach(el => el.classList.add('is-visible'));
+}
+
+// ===== Contador de vistas por pieza del portfolio =====
+// Requiere que el sitio esté publicado en Cloudflare Pages con las
+// Functions de /functions/api/views.js activas y una KV namespace
+// llamada VIEWS enlazada (ver README, sección "Contador de vistas").
+// Si esa API no está disponible (por ejemplo, viendo la web en local),
+// los contadores se quedan simplemente en 0 sin romper nada más.
+const viewCountEls = document.querySelectorAll('.view-count[data-piece-count]');
+
+if (viewCountEls.length) {
+  fetch('/api/views')
+    .then(res => (res.ok ? res.json() : null))
+    .then(data => {
+      if (!data) return;
+      viewCountEls.forEach(el => {
+        const slug = el.getAttribute('data-piece-count');
+        if (typeof data[slug] === 'number') {
+          el.textContent = data[slug];
+        }
+      });
+    })
+    .catch(() => { /* API no disponible todavía */ });
+
+  document.querySelectorAll('[data-track-slug]').forEach(link => {
+    link.addEventListener('click', () => {
+      const slug = link.getAttribute('data-track-slug');
+      fetch('/api/views', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug }),
+        keepalive: true,
+      })
+        .then(res => (res.ok ? res.json() : null))
+        .then(data => {
+          if (!data || typeof data.count !== 'number') return;
+          const counter = document.querySelector(`.view-count[data-piece-count="${slug}"]`);
+          if (counter) counter.textContent = data.count;
+        })
+        .catch(() => { /* API no disponible todavía */ });
+    });
+  });
 }
